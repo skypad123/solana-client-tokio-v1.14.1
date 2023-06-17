@@ -53,9 +53,13 @@ mod target_arch {
         crate::{
             curve25519::scalar::PodScalar,
             errors::ProofError,
+<<<<<<< HEAD
             instruction::transfer::{
                 FeeEncryption, FeeParameters, TransferPubkeys, TransferWithFeePubkeys,
             },
+=======
+            instruction::transfer::{TransferPubkeys, TransferWithFeePubkeys},
+>>>>>>> 428283c9e ([zk-token-sdk] Refactor pod `FeeParameters` conversion and remove manual byte conversion for the type (#32149))
         },
         curve25519_dalek::{ristretto::CompressedRistretto, scalar::Scalar},
         std::convert::TryFrom,
@@ -134,6 +138,7 @@ mod target_arch {
             })
         }
     }
+<<<<<<< HEAD
 
     impl From<FeeEncryption> for pod::FeeEncryption {
         fn from(ciphertext: FeeEncryption) -> Self {
@@ -178,6 +183,8 @@ mod target_arch {
             }
         }
     }
+=======
+>>>>>>> 428283c9e ([zk-token-sdk] Refactor pod `FeeParameters` conversion and remove manual byte conversion for the type (#32149))
 }
 
 #[cfg(target_os = "solana")]
